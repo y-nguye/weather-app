@@ -1,16 +1,21 @@
 * {
   margin: 0;
+  font-family: "SVN-Cera-Round", sans-serif;
+}
+
+@font-face {
+  font-family: "SVN-Cera-Round";
+  src: url(./font/SVN-Cera-Round-Medium.ttf);
 }
 
 #root {
   width: 90%;
-  max-width: 470px;
-  background: linear-gradient(135deg, #a5cec3, #c3bde0);
+  max-width: 400px;
+  background: linear-gradient(135deg, #22bd93, #2a2155);
   color: white;
-  margin: 100px auto 0 auto;
-  border-radius: 10px;
-  padding: 40px 35px;
-  /* text-align: center; */
+  margin: 40px auto;
+  border-radius: 25px;
+  padding: 20px 20px;
 }
 
 #search {
@@ -20,7 +25,7 @@
 }
 
 #inputSearch {
-  font-size: 18px;
+  font-size: 16px;
   height: 50px;
   line-height: 0;
   padding: 0 20px;
@@ -48,28 +53,100 @@
   color: #555;
 }
 
-.weather {
-  padding-top: 50px;
+.weather-container {
+  padding-top: 20px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.weather-icon {
-  width: 150px;
-  align-items: center;
-  /* flex: 1; */
-}
-
-.info {
-  /* flex: 2; */
+.city {
+  font-size: 42px;
   text-align: center;
 }
 
 .description {
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 8px;
   text-transform: capitalize;
 }
 
+.weather {
+  position: relative;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.temp {
+  font-size: 120px;
+  text-align: center;
+  position: relative;
+}
+.unit-c {
+  font-weight: 300;
+  position: absolute;
+  top: -20px;
+}
+
+.weather-icon {
+  position: relative;
+  width: 180px;
+  object-fit: cover;
+  margin-top: -60px;
+}
+
 .details {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.col {
+  width: 54%;
+  margin: -10px;
+}
+
+.details_container {
+  height: 150px;
+  margin: 20px 10px 10px 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(27, 45, 71, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.title {
+  font-weight: 300;
+  text-align: start;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.info {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: start;
+}
+
+.cloud,
+.humidity,
+.wind,
+.visibility {
+  font-size: 35px;
+}
+
+.message {
+  font-size: 16px;
 }
