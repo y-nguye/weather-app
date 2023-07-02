@@ -35,6 +35,8 @@
   border: 0;
   outline: 0;
   color: #757575;
+  position: relative;
+  z-index: 10;
 
   backdrop-filter: blur(1px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -124,6 +126,7 @@
   width: 180px;
   margin-top: -60px;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  z-index: 5;
 }
 
 .details {
