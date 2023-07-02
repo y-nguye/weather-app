@@ -26,16 +26,21 @@
 
 #inputSearch {
   font-size: 16px;
+  line-height: 50px;
   height: 50px;
-  line-height: 0;
   padding: 0 20px;
   flex: 1;
   border-radius: 10px;
   margin-right: 16px;
   border: 0;
   outline: 0;
-  color: #555;
-  background: #ebfffc;
+  color: #757575;
+
+  backdrop-filter: blur(1px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(194, 226, 221, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 #search button {
@@ -45,12 +50,21 @@
   width: 60px;
   padding: 0 20px;
   cursor: pointer;
-  background: #ebfffc;
+
+  backdrop-filter: blur(1px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(194, 226, 221, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+#search button:hover {
+  background-color: rgba(194, 226, 221, 1);
 }
 
 .fa-magnifying-glass {
   font-size: 16px;
-  color: #555;
+  color: #757575;
 }
 
 .weather-container {
@@ -64,6 +78,7 @@
 .city {
   font-size: 42px;
   text-align: center;
+  color: rgba(255, 255, 255, 1);
 }
 
 .description {
@@ -83,18 +98,32 @@
   font-size: 120px;
   text-align: center;
   position: relative;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.4)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
 }
+
 .unit-c {
   font-weight: 300;
   position: absolute;
   top: -20px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.4)
+  );
+  -webkit-background-clip: text;
 }
 
 .weather-icon {
   position: relative;
   width: 180px;
-  object-fit: cover;
   margin-top: -60px;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
 .details {
@@ -120,7 +149,7 @@
 
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(27, 45, 71, 0.5);
+  background-color: rgba(194, 226, 221, 0.3);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
@@ -149,4 +178,8 @@
 
 .message {
   font-size: 16px;
+}
+
+.hidden {
+  display: none;
 }
